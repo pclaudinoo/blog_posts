@@ -1,0 +1,101 @@
+2024-12-10T18:52:42.359+0000	using write concern: &{majority false 0}
+2024-12-10T18:52:42.452+0000	checking options
+2024-12-10T18:52:42.452+0000		dumping with object check disabled
+2024-12-10T18:52:42.453+0000	will listen for SIGTERM, SIGINT, and SIGKILL
+2024-12-10T18:52:42.454+0000	connected to node type: replset
+2024-12-10T18:52:42.454+0000	mongorestore target is a directory, not a file
+2024-12-10T18:52:42.454+0000	preparing collections to restore from
+2024-12-10T18:52:42.454+0000	using /bigdisk/pablo.claudino/blog_oplog/7.0.15/source/dump as dump root directory
+2024-12-10T18:52:42.454+0000	reading collections for database admin in admin
+2024-12-10T18:52:42.455+0000	found collection admin.system.users bson to restore to admin.system.users
+2024-12-10T18:52:42.455+0000	found collection metadata from admin.system.users to restore to admin.system.users
+2024-12-10T18:52:42.455+0000	adding intent for admin.system.users
+2024-12-10T18:52:42.455+0000	found collection admin.system.version bson to restore to admin.system.version
+2024-12-10T18:52:42.455+0000	found collection metadata from admin.system.version to restore to admin.system.version
+2024-12-10T18:52:42.455+0000	adding intent for admin.system.version
+2024-12-10T18:52:42.455+0000	found oplog.bson file to replay
+2024-12-10T18:52:42.455+0000	enqueued collection '.oplog'
+2024-12-10T18:52:42.455+0000	reading collections for database test in test
+2024-12-10T18:52:42.455+0000	found collection test.collection01 bson to restore to test.collection01
+2024-12-10T18:52:42.455+0000	found collection metadata from test.collection01 to restore to test.collection01
+2024-12-10T18:52:42.455+0000	adding intent for test.collection01
+2024-12-10T18:52:42.455+0000	found collection test.collection02 bson to restore to test.collection02
+2024-12-10T18:52:42.455+0000	found collection metadata from test.collection02 to restore to test.collection02
+2024-12-10T18:52:42.455+0000	adding intent for test.collection02
+2024-12-10T18:52:42.455+0000	comparing auth version of the dump directory and target server
+2024-12-10T18:52:42.463+0000	system.version document is not an authSchema featureCompatibilityVersion
+2024-12-10T18:52:42.465+0000	restoring users and roles of auth version 5 to a server of auth version 5
+2024-12-10T18:52:42.465+0000	reading metadata for test.collection01 from /bigdisk/pablo.claudino/blog_oplog/7.0.15/source/dump/test/collection01.metadata.json
+2024-12-10T18:52:42.465+0000	reading metadata for test.collection02 from /bigdisk/pablo.claudino/blog_oplog/7.0.15/source/dump/test/collection02.metadata.json
+2024-12-10T18:52:42.466+0000	finalizing intent manager with longest task first prioritizer
+2024-12-10T18:52:42.466+0000	restoring up to 4 collections in parallel
+2024-12-10T18:52:42.466+0000	starting restore routine with id=3
+2024-12-10T18:52:42.466+0000	starting restore routine with id=1
+2024-12-10T18:52:42.466+0000	starting restore routine with id=2
+2024-12-10T18:52:42.466+0000	ending restore routine with id=2, no more work to do
+2024-12-10T18:52:42.466+0000	starting restore routine with id=0
+2024-12-10T18:52:42.466+0000	ending restore routine with id=0, no more work to do
+2024-12-10T18:52:42.467+0000	creating collection test.collection02 using options from metadata
+2024-12-10T18:52:42.467+0000	using collection options: primitive.D{primitive.E{Key:"collation", Value:primitive.D{primitive.E{Key:"locale", Value:"es@collation=search"}, primitive.E{Key:"caseLevel", Value:false}, primitive.E{Key:"caseFirst", Value:"off"}, primitive.E{Key:"strength", Value:3}, primitive.E{Key:"numericOrdering", Value:false}, primitive.E{Key:"alternate", Value:"non-ignorable"}, primitive.E{Key:"maxVariable", Value:"punct"}, primitive.E{Key:"normalization", Value:false}, primitive.E{Key:"backwards", Value:false}, primitive.E{Key:"version", Value:"57.1"}}}, primitive.E{Key:"idIndex", Value:idx.IndexDocument{Options:primitive.M{"collation":primitive.M{"alternate":"non-ignorable", "backwards":false, "caseFirst":"off", "caseLevel":false, "locale":"es@collation=search", "maxVariable":"punct", "normalization":false, "numericOrdering":false, "strength":3, "version":"57.1"}, "name":"_id_", "ns":"test.collection02"}, Key:primitive.D{primitive.E{Key:"_id", Value:1}}, PartialFilterExpression:primitive.D(nil)}}}
+2024-12-10T18:52:42.468+0000	creating collection test.collection01 with no metadata
+2024-12-10T18:52:42.468+0000	using collection options: primitive.D{primitive.E{Key:"idIndex", Value:idx.IndexDocument{Options:primitive.M{"name":"_id_", "ns":"test.collection01"}, Key:primitive.D{primitive.E{Key:"_id", Value:1}}, PartialFilterExpression:primitive.D(nil)}}}
+2024-12-10T18:52:42.493+0000	restoring test.collection02 from /bigdisk/pablo.claudino/blog_oplog/7.0.15/source/dump/test/collection02.bson
+2024-12-10T18:52:42.494+0000	using 1 insertion workers
+2024-12-10T18:52:42.497+0000	restoring test.collection01 from /bigdisk/pablo.claudino/blog_oplog/7.0.15/source/dump/test/collection01.bson
+2024-12-10T18:52:42.498+0000	using 1 insertion workers
+2024-12-10T18:52:45.451+0000	[##......................]  test.collection02  54.9MB/655MB   (8.4%)
+2024-12-10T18:52:45.451+0000	[###.....................]  test.collection01  54.1MB/328MB  (16.5%)
+2024-12-10T18:52:45.451+0000	
+2024-12-10T18:52:48.451+0000	[###.....................]  test.collection02  106MB/655MB  (16.2%)
+2024-12-10T18:52:48.451+0000	[#######.................]  test.collection01  103MB/328MB  (31.5%)
+2024-12-10T18:52:48.451+0000	
+2024-12-10T18:52:51.451+0000	[#####...................]  test.collection02  153MB/655MB  (23.4%)
+2024-12-10T18:52:51.451+0000	[###########.............]  test.collection01  150MB/328MB  (45.9%)
+2024-12-10T18:52:51.451+0000	
+2024-12-10T18:52:54.451+0000	[#######.................]  test.collection02  196MB/655MB  (29.9%)
+2024-12-10T18:52:54.451+0000	[##############..........]  test.collection01  193MB/328MB  (59.0%)
+2024-12-10T18:52:54.451+0000	
+2024-12-10T18:52:57.451+0000	[########................]  test.collection02  239MB/655MB  (36.5%)
+2024-12-10T18:52:57.452+0000	[#################.......]  test.collection01  237MB/328MB  (72.2%)
+2024-12-10T18:52:57.452+0000	
+2024-12-10T18:53:00.451+0000	[##########..............]  test.collection02  284MB/655MB  (43.4%)
+2024-12-10T18:53:00.451+0000	[####################....]  test.collection01  281MB/328MB  (85.6%)
+2024-12-10T18:53:00.451+0000	
+2024-12-10T18:53:03.451+0000	[###########.............]  test.collection02  324MB/655MB  (49.5%)
+2024-12-10T18:53:03.451+0000	[#######################.]  test.collection01  320MB/328MB  (97.7%)
+2024-12-10T18:53:03.451+0000	
+2024-12-10T18:53:04.188+0000	[########################]  test.collection01  328MB/328MB  (100.0%)
+2024-12-10T18:53:04.188+0000	finished restoring test.collection01 (252998 documents, 0 failures)
+2024-12-10T18:53:04.188+0000	ending restore routine with id=1, no more work to do
+2024-12-10T18:53:06.452+0000	[#############...........]  test.collection02  370MB/655MB  (56.5%)
+2024-12-10T18:53:09.451+0000	[###############.........]  test.collection02  423MB/655MB  (64.7%)
+2024-12-10T18:53:12.465+0000	[#################.......]  test.collection02  476MB/655MB  (72.8%)
+2024-12-10T18:53:15.452+0000	[#################.......]  test.collection02  478MB/655MB  (73.1%)
+2024-12-10T18:53:18.452+0000	[##################......]  test.collection02  499MB/655MB  (76.3%)
+2024-12-10T18:53:21.451+0000	[###################.....]  test.collection02  545MB/655MB  (83.3%)
+2024-12-10T18:53:24.452+0000	[#####################...]  test.collection02  591MB/655MB  (90.2%)
+2024-12-10T18:53:27.452+0000	[#######################.]  test.collection02  646MB/655MB  (98.6%)
+2024-12-10T18:53:28.185+0000	[########################]  test.collection02  655MB/655MB  (100.0%)
+2024-12-10T18:53:28.185+0000	finished restoring test.collection02 (503675 documents, 0 failures)
+2024-12-10T18:53:28.185+0000	ending restore routine with id=3, no more work to do
+2024-12-10T18:53:28.185+0000	restoring users from /bigdisk/pablo.claudino/blog_oplog/7.0.15/source/dump/admin/system.users.bson
+2024-12-10T18:53:28.200+0000	restoring users to temporary collection
+2024-12-10T18:53:28.200+0000	using 1 insertion workers
+2024-12-10T18:53:28.219+0000	merging users/roles from temp collections
+2024-12-10T18:53:28.223+0000	dropping temporary collection admin.tempusers
+2024-12-10T18:53:28.232+0000	replaying oplog
+2024-12-10T18:53:30.451+0000	oplog  816KB
+2024-12-10T18:53:31.824+0000	applied 2034 oplog entries
+2024-12-10T18:53:31.824+0000	oplog  1.21MB
+2024-12-10T18:53:31.824+0000	building indexes up to 4 collections in parallel
+2024-12-10T18:53:31.824+0000	starting index build routine with id=3
+2024-12-10T18:53:31.824+0000	no indexes to restore for collection test.collection01
+2024-12-10T18:53:31.824+0000	no indexes to restore for collection test.collection02
+2024-12-10T18:53:31.824+0000	ending index build routine with id=3, no more work to do
+2024-12-10T18:53:31.824+0000	starting index build routine with id=1
+2024-12-10T18:53:31.824+0000	ending index build routine with id=1, no more work to do
+2024-12-10T18:53:31.824+0000	starting index build routine with id=0
+2024-12-10T18:53:31.824+0000	ending index build routine with id=0, no more work to do
+2024-12-10T18:53:31.824+0000	starting index build routine with id=2
+2024-12-10T18:53:31.824+0000	ending index build routine with id=2, no more work to do
+2024-12-10T18:53:31.824+0000	756673 document(s) restored successfully. 0 document(s) failed to restore.
